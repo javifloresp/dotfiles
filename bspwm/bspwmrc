@@ -1,0 +1,69 @@
+#! /bin/sh
+
+xsetroot -cursor_name left_ptr
+
+# Display
+
+xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-0 --mode 1920x1080 --rotate normal --right-of eDP-1
+
+killall -q sxhkd
+
+sxhkd &
+
+# polyba Terminate already running bar instances
+killall -q polybar
+
+bash ~/config/polybar/cyberpunk/start.sh &
+
+# compositing and wallpaper 
+
+killall -q picom
+
+picom --experimental-backends --backend glx --xrender-sync-fence &
+
+
+feh --randomize --bg-scale --no-fehbg ~/config/background/cyberpunk.jpg &
+
+#killall -q conky
+
+#bash ~/.conky/conky-launch.sh &> /dev/null 2>&1 
+
+#killall -q glava
+
+#glava &> /dev/null 2>&1 
+
+killall -q unclutter
+
+unclutter -idle 10 &> /dev/null 2>&1 &
+
+#  start_from=1
+#  monitors_connected=$(bspc query -M | wc -l)
+#  per_monitor=$(( 10 / monitors_connected ))
+#  for monitor in $(bspc query -M); do
+#     bspc monitor $monitor -d $(seq $start_from $(( start_from + per_monitor - 1)))
+#     start_from=$(( start_from + per_monitor ))
+#  done
+
+bspc monitor HDMI-1-0 -d 1 2 3 4 5
+
+bspc monitor eDP-1 -d 6 7 8 9
+
+
+sleep 1
+ 
+#--Globals--#
+bspc config automatic_scheme alternate
+bspc config initial_polarity second_child
+bspc config pointer_modifier shift
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config click_to_focus none
+
+bspc config pointer_follows_focus false
+bspc config focus_follows_pointer true
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+bspc config merge_overlapping_monitors true
+
+bspc config border_width 0

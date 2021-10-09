@@ -1,0 +1,10 @@
+/* colors */
+* {
+  wth:  white;
+  al:   #00000000;
+  bg:   rgba(0, 10, 27 , 0.68627450980392156); //container
+  bga:  rgba(0, 10, 27,0.1627450980392156); // input
+  fg:   rgba(211, 0, 196,0.98627450980392156); // text
+  ac:   rgba(211, 0, 196,0.88627450980392156); // seleted bar 
+  se:   rgba(16, 56, 112,0.18627450980392156); // seleted bar background
+}
