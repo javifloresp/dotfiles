@@ -10,6 +10,7 @@ Install via symbolic link
   git clone git@github.com:javifloresp/dotfiles.git ~/config
   cd ~/config
   ln -s ~/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
+  ln -s ~/config/picom/picom.conf ~/.config/picom/picom.conf
   ln -s ~/config/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 ```
     
