@@ -1,3 +1,6 @@
+## Environment
+
+Manjaro KDE
 
 ## Installation
 
