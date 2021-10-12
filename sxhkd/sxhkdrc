@@ -10,13 +10,13 @@ super + y
 	XDG_CURRENT_DESKTOP=kde firefox-developer-edition --new-window https://www.youtube.com/
 
 super + b
-	XDG_CURRENT_DESKTOP=kde brave
+	XDG_CURRENT_DESKTOP=kde firefox-developer-edition
 
 super + alt + b
-	feh --randomize --bg-fill  ~/config/background/cyberpunk.jpg
+	feh --randomize --bg-fill  ~/config/background/forest.jpg
 
 super + p
-	~/config/polybar/cyberpunk/scripts/powermenu.sh &
+	~/config/polybar/forest/scripts/powermenu.sh &
 	
 super + alt + f
 	XDG_CURRENT_DESKTOP=kde dolphin 
@@ -25,7 +25,7 @@ super + alt + s
 	XDG_CURRENT_DESKTOP=kde systemsettings5
 
 alt + space
-	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/config/polybar/cyberpunk/scripts/rofi/launcher.rasi
+	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/config/polybar/forest/scripts/rofi/launcher.rasi
 
 # reload config (bspwmrc and sxhkdrc)  # 
 
@@ -113,10 +113,12 @@ super + {grave,Tab}
 alt + shift + {Left,Right}
     id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id}
 
-
 # move focused window to the next workspace and then switch to that workspace
 alt + shift + {1-9}
     id=$(bspc query --nodes --node); bspc node --to-desktop '^{1-9,10}'; bspc desktop --focus next; bspc node --focus ${id}
+
+super + space
+	bspc node -t "~"{floating,tiled}
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -126,8 +128,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} {1-9,10}
-	#bspc {desktop -f,node -d} '^{1-9,10}'
+	bspc {desktop -f,node -d} '{1-9,10}'
 
 # preselect ( select the direction you want the window to be opened in )
 
@@ -150,8 +151,8 @@ super + ctrl + shift + space
 # move/resize
 
 # expand a window by moving one of its side outward
-super + ctrl + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+alt + ctrl + {Left,Down,Up,Right}
+	bspc node -z {left 20 0,bottom 0 20,top 0 20,right 20 0}
 
 # contract a window by moving one of its side inward
 super + ctrl + shift + {Left,Down,Up,Right}

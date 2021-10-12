@@ -8,12 +8,12 @@ xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1
 
 killall -q sxhkd
 
-sxhkd &
+sxhkd -c ~/config/sxhkd/sxhkdrc &
 
 # polyba Terminate already running bar instances
 killall -q polybar
 
-bash ~/config/polybar/cyberpunk/start.sh &
+bash ~/config/polybar/forest/start.sh &
 
 # compositing and wallpaper 
 
@@ -22,7 +22,7 @@ killall -q picom
 picom --experimental-backends --backend glx --xrender-sync-fence &
 
 
-feh --randomize --bg-scale --no-fehbg ~/config/background/cyberpunk.jpg &
+feh --randomize --bg-scale --no-fehbg ~/config/background/forest.jpg &
 
 #killall -q conky
 

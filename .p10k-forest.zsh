@@ -1,4 +1,4 @@
-# This theme is gruvbox material version of purepower(powerlevel10k)
+# This theme is everforest version of purepower(powerlevel10k)
 # Upstream: https://github.com/romkatv/dotfiles-public/blob/master/.purepower
 
 # PURE_POWER_MODE=modern    use nerdfont characters in the prompt
@@ -56,8 +56,8 @@ fi
     p=$ins
   fi
   if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    local ok="%F{#d4be98}${p}%f"
-    local err="%F{#ea6962}${p}%f"
+    local ok="%F{#d3c6aa}${p}%f"
+    local err="%F{#e67e80}${p}%f"
   else
     local ok="%F{$(_pp_s 007 223)}${p}%f"
     local err="%F{$(_pp_s 001 167)}${p}%f"
@@ -68,7 +68,7 @@ fi
     typeset -g POWERLEVEL9K_RULER_CHAR=$(_pp_s '-' '─')
     typeset -g POWERLEVEL9K_RULER_BACKGROUND=none
     if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-      typeset -g POWERLEVEL9K_RULER_FOREGROUND='#665c54'
+      typeset -g POWERLEVEL9K_RULER_FOREGROUND='#859289'
     else
       typeset -g POWERLEVEL9K_RULER_FOREGROUND=$(_pp_c 7 241)
     fi
@@ -90,7 +90,7 @@ fi
   typeset -g POWERLEVEL9K_DIR_{ETC,HOME,HOME_SUBFOLDER,DEFAULT,NOT_WRITABLE}_BACKGROUND=none
   typeset -g POWERLEVEL9K_{ETC,FOLDER,HOME,HOME_SUB}_ICON=
   if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_VISUAL_IDENTIFIER_COLOR='#e78a4e'
+    typeset -g POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_VISUAL_IDENTIFIER_COLOR='#e69875'
   else
     typeset -g POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_VISUAL_IDENTIFIER_COLOR=$(_pp_c 003 208)
   fi
@@ -100,9 +100,9 @@ fi
     typeset -g POWERLEVEL9K_LOCK_ICON=
   fi
   if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND='#89b482'
-    typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND='#a9b665'
-    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#ea6962'
+    typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND='#83c092'
+    typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND='#a7c080'
+    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#e67e80'
   else
     typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND=$(_pp_c 006 108)
     typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND=$(_pp_c 010 142)
@@ -112,10 +112,10 @@ fi
   typeset -g POWERLEVEL9K_VCS_{CLEAN,UNTRACKED,MODIFIED,LOADING}_BACKGROUND=none
   typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED}_MAX_NUM=99
   if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#7daea3'
-    typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='#d8a657'
-    typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#d3869b'
-    typeset -g POWERLEVEL9K_VCS_LOADING_FOREGROUND='#928374'
+    typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#7fbbb3'
+    typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='#dbbc7f'
+    typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#d699b6'
+    typeset -g POWERLEVEL9K_VCS_LOADING_FOREGROUND='#859289'
   else
     typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=$(_pp_c 004 109)
     typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=$(_pp_c 011 214)
@@ -161,7 +161,7 @@ fi
   typeset -g POWERLEVEL9K_STATUS_OK=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=none
   if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#ea6962'
+    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#e67e80'
   else
     typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$(_pp_c 001 167)
   fi
@@ -170,7 +170,7 @@ fi
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=none
   if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#a89984'
+    typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#859289'
   else
     typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$(_pp_c 008 246)
   fi
@@ -178,8 +178,8 @@ fi
 
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,ROOT,REMOTE_SUDO,REMOTE,SUDO}_BACKGROUND=none
   if [[ "$DESERT_NIGHT_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND='#e78a4e'
-    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#ea6962'
+    typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND='#e69875'
+    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#e67e80'
   else
     typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND=$(_pp_c 003 208)
     typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=$(_pp_c 001 167)
