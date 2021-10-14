@@ -1,7 +1,13 @@
 #  ------ programs  -------- # 
 #~/.local/kitty.app/bin/kitty
 super + Return
-	XDG_CURRENT_DESKTOP=kde konsole
+	XDG_CURRENT_DESKTOP=kde GDK_BACKEND=x11 konsole
+
+super + k
+	GDK_BACKEND=x11 ~/.local/kitty.app/bin/kitty
+
+super + a
+	XDG_CURRENT_DESKTOP=kde GDK_BACKEND=x11 alacritty
 
 super + w
 	XDG_CURRENT_DESKTOP=kde firefox-developer-edition --new-window https://web.whatsapp.com/; 
@@ -186,6 +192,3 @@ super + u
 # clipboard cropped
 super + shift + u
     escrotum -sC > /dev/null 2>&1 
-
-
-
