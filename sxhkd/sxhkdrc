@@ -19,10 +19,10 @@ super + b
 	XDG_CURRENT_DESKTOP=kde firefox-developer-edition
 
 super + alt + b
-	feh --randomize --bg-fill  ~/config/background/forest.jpg
+	feh --randomize --bg-fill  ~/config/background/deepocean.jpg
 
 super + p
-	~/config/polybar/forest/scripts/powermenu.sh &
+	~/config/polybar/deepocean/scripts/powermenu.sh &
 	
 super + alt + f
 	XDG_CURRENT_DESKTOP=kde dolphin 
@@ -31,7 +31,7 @@ super + alt + s
 	XDG_CURRENT_DESKTOP=kde systemsettings5
 
 alt + space
-	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/config/polybar/forest/scripts/rofi/launcher.rasi
+	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/config/polybar/deepocean/scripts/rofi/launcher.rasi
 
 # reload config (bspwmrc and sxhkdrc)  # 
 

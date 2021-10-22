@@ -13,7 +13,7 @@ sxhkd -c ~/config/sxhkd/sxhkdrc &
 # polyba Terminate already running bar instances
 killall -q polybar
 
-bash ~/config/polybar/forest/start.sh &
+bash ~/config/polybar/deepocean/start.sh &
 
 # compositing and wallpaper 
 
@@ -22,7 +22,11 @@ killall -q picom
 picom --experimental-backends --backend glx --xrender-sync-fence &
 
 
-feh --randomize --bg-scale --no-fehbg ~/config/background/forest.jpg &
+feh --randomize --bg-scale --no-fehbg ~/config/background/deepocean.jpg &
+
+killall -q xwinwrap
+
+#xwinwrap -g 1920x1080+1920+0 -ov -- mpv --loop -wid WID ~/Vídeos/deep-ocean.mp4 &&
 
 #killall -q conky
 
@@ -44,9 +48,9 @@ unclutter -idle 10 &> /dev/null 2>&1 &
 #     start_from=$(( start_from + per_monitor ))
 #  done
 
-bspc monitor HDMI-1-0 -d 1 2 3 4 5
+bspc monitor HDMI-1-0 -d 1 2 3 4 5 6 7 8 9
 
-bspc monitor eDP-1 -d 6 7 8 9
+# bspc monitor eDP-1 -d 6 7 8 9
 
 
 sleep 1

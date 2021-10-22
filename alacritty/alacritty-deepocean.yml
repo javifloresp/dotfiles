@@ -1,0 +1,108 @@
+env:
+  TERM: xterm-256color
+window:
+  padding:
+    x: 6
+    y: 6
+  dynamic_padding: false
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+scrolling:
+  history: 5000
+font:
+  normal:
+    family: MesloLGS NF
+    style: Regular
+  bold:
+    family: MesloLGS NF
+    style: Bold
+  italic:
+    family: MesloLGS NF
+    style: Italic
+  bold_italic:
+    family: MesloLGS NF
+    style: Bold Italic
+  size: 8
+  offset:
+    x: 0
+    y: 1
+draw_bold_text_with_bright_colors: true
+# Colors (Cyberpunk)
+draw_bold_text_with_bright_colors: true
+
+# material ocean color scheme
+colors:
+  primary:
+    background:   '#0f111a'
+    foreground:  '#f8da9e'
+  cursor:
+    cursor: '#80d2cc'
+  normal:
+    black:      '#01112a'
+    red:        '#06162f'
+    green:      '#40c4c6'
+    yellow:     '#05324f'
+    blue:       '#2c6e84'
+    magenta:    '#012241'
+    cyan:       '#80d2cc'
+    white:      '#f9dc7e'
+background_opacity: 0.9
+key_bindings:
+  - key: V
+    mods: Control|Shift
+    action: Paste
+  - key: C
+    mods: Control|Shift
+    action: Copy
+  - key: Insert
+    mods: Shift
+    action: PasteSelection
+  - key: Key0
+    mods: Control
+    action: ResetFontSize
+  - key: Equals
+    mods: Control
+    action: IncreaseFontSize
+  - key: Plus
+    mods: Control
+    action: IncreaseFontSize
+  - key: Minus
+    mods: Control
+    action: DecreaseFontSize
+  - key: F11
+    mods: None
+    action: ToggleFullscreen
+  - key: Paste
+    mods: None
+    action: Paste
+  - key: Copy
+    mods: None
+    action: Copy
+  - key: L
+    mods: Control
+    action: ClearLogNotice
+  - key: L
+    mods: Control
+    chars: "\f"
+  - key: PageUp
+    mods: None
+    action: ScrollPageUp
+    mode: ~Alt
+  - key: PageDown
+    mods: None
+    action: ScrollPageDown
+    mode: ~Alt
+  - key: Home
+    mods: Shift
+    action: ScrollToTop
+    mode: ~Alt
+  - key: End
+    mods: Shift
+    action: ScrollToBottom
+    mode: ~Alt
+
+    mods: Shift
+    action: ScrollToBottom
+    mode: ~Alt
