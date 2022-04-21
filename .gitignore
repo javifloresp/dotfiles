@@ -21,3 +21,5 @@ nvim/LICENSE
 nvim/gitignore
 nvim-bk/
 rose/
+cava/
+.DS_store
