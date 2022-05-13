@@ -1,14 +1,14 @@
 #!/usr/bin/env sh
 
- sudo yabai --load-sa
+sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # global settings
-yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
+yabai -m config mouse_follows_focus          on
+yabai -m config focus_follows_mouse          on
 yabai -m config window_placement             first_child
 yabai -m config window_topmost               off
-yabai -m config window_shadow                off
+yabai -m config window_shadow                on
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
@@ -48,8 +48,9 @@ yabai -m space 10 --label X
 # yabai -m rule --add app="Google Chrome" space=1
 # yabai -m rule --add app="Alacritty"     space=2
 # ^^ these are annoying
-yabai -m rule --add app="Safari"        space=3
-yabai -m rule --add app="Spotify"       space=8
+yabai -m rule --add app="Brave Browser"        space=2
+yabai -m rule --add app="iTerm2"        space=3
+yabai -m rule --add app="Spotify"       space=10
 yabai -m rule --add app="Discord"       space=5
 
 yabai -m rule --add app="^System Preferences$" manage=off

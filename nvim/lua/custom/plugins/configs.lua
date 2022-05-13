@@ -35,7 +35,7 @@ M.nvimtree = {
    disable_netrw = true,
    hijack_netrw = true,
    ignore_ft_on_setup = { "dashboard" },
-   auto_close = false,
+   -- auto_close = false,
    open_on_tab = false,
    hijack_cursor = true,
    hijack_unnamed_buffer_when_opening = false,
@@ -45,8 +45,8 @@ M.nvimtree = {
       update_cwd = false,
    },
    view = {
-      allow_resize = true,
-      side = "left",
+      -- allow_resize = true,
+      side = "right",
       width = 50,
       hide_root_folder = true,
    },
@@ -131,5 +131,42 @@ M.alpha = {
       },
    }
 }
+
+local source_mapping = {
+	buffer = "[Buffer]",
+	nvim_lsp = "[LSP]",
+	nvim_lua = "[Lua]",
+	cmp_tabnine = "[TN]",
+}
+
+M.nvim_cmp = {
+	formatting = {
+		format = function(entry, vim_item)
+			local icons = require "plugins.configs.lspkind_icons"
+			vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+
+			local menu = source_mapping[entry.source.name]
+			if entry.source.name == "cmp_tabnine" then
+				if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+					menu = entry.completion_item.data.detail .. " " .. menu
+				end
+				vim_item.kind = ""
+			end
+			vim_item.menu = menu
+
+			return vim_item
+		end,
+	},
+   sources = {
+      { name = "nvim_lsp" },
+      { name = "luasnip" },
+      { name = "buffer" },
+      { name = "nvim_lua" },
+      { name = "path" },
+      { name = 'cmp_tabnine' },
+   },
+}
+
+
 
 return M

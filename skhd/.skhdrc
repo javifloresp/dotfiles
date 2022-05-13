@@ -1,9 +1,6 @@
 #  NOTE(koekeishiya): A list of all built-in modifier and literal keywords can
 #                     be found at https://github.com/koekeishiya/skhd/issues/1
 
-# open terminal
-cmd - return : Applications/Alacritty.app/Contents/MacOS/alacritty
-
 # open browser
 ctrl + shift - b : Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser &> /dev/null
 
@@ -21,9 +18,6 @@ cmd + shift - s : osascript -e 'tell application "Spotify" to play'
 
 #open iterm terminal
 cmd + shift - return : Applications/iTerm.app/Contents/MacOS/iTerm2 --single-instance -d ~
-
-# open Safari
-cmd + shift - return : osascript -e 'tell application "Brave Browser" to make new document'
 
 # close focused window
 alt - w : yabai -m window --close
