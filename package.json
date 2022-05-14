@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@themerdev/visual-studio": "^1.0.1",
+    "@themerdev/vscode": "^2.4.0",
+    "themer": "^3.3.9",
+    "themer-vscode": "^2.2.1"
+  }
+}

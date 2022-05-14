@@ -53,24 +53,6 @@ M.base_16 = {
     base0E = "#7a5ccc", --Keywords, Storage, Selector, Markup Italic, Diff Changed
     base0F = "#F16269", --Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 }
--- let g:terminal_color_foreground = "#ecf0c1"
--- let g:terminal_color_background = "#0f111b"
--- let g:terminal_color_0 = "#000000"
--- let g:terminal_color_1 = "#e33400"
--- let g:terminal_color_2 = "#5ccc96"
--- let g:terminal_color_3 = "#b3a1e6"
--- let g:terminal_color_4 = "#00a3cc"
--- let g:terminal_color_5 = "#ce6f8f"
--- let g:terminal_color_6 = "#7a5ccc"
--- let g:terminal_color_7 = "#686f9a"
--- let g:terminal_color_8 = "#686f9a"
--- let g:terminal_color_9 = "#e33400"
--- let g:terminal_color_10 = "#5ccc96"
--- let g:terminal_color_11 = "#b3a1e6"
--- let g:terminal_color_12 = "#00a3cc"
--- let g:terminal_color_13 = "#ce6f8f"
--- let g:terminal_color_14 = "#7a5ccc"
--- let g:terminal_color_15 = "#ecf0c1"
 
 M = require("base46").override_theme(M, "spaceduck")
 

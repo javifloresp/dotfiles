@@ -23,3 +23,7 @@ nvim-bk/
 rose/
 cava/
 .DS_store
+gen/
+back-nvim/
+node_modules/
+themer/
