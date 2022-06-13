@@ -6,17 +6,6 @@ M.neogen = {
   }
 }
 
-M.bufferline = {
-  n = {
-    ["<C-w>"] = {
-      function()
-        nvchad.close_buffer()
-      end,
-      "   close buffer",
-    },
-  }
-}
-
 M.telescope = {
   n = {
     ["<C-a>"] = { ":Telescope find_files follow=true no_ignore=true hidden=true <CR> ", "  find media" },

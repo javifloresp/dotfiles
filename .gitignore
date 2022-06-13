@@ -27,3 +27,6 @@ gen/
 back-nvim/
 node_modules/
 themer/
+walmac/
+configstore/
+nvim-legacy/

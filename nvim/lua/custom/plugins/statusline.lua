@@ -59,7 +59,8 @@ options.icon_styles = {
     },
 }
 
-options.separator_style = options.icon_styles[nvchad.load_config().plugins.options.statusline.separator_style]
+-- options.separator_style = options.icon_styles[nvchad.load_config().plugins.options.statusline.separator_style]
+options.separator_style = options.icon_styles[require("core.utils").load_config().plugins.options.statusline.separator_style]
 
 options.main_icon = {
     provider = options.separator_style.main_icon,
@@ -420,12 +421,20 @@ options.current_line = {
     },
 }
 
-options = nvchad.load_override(options, "feline-nvim/feline.nvim")
+-- options = nvchad.load_override(options, "feline-nvim/feline.nvim")
+
+-- local function add_table(tbl, inject)
+--     if inject then
+--         table.insert(tbl, inject)
+--     end
+-- end
+
+options = require("core.utils").load_override(options, "feline-nvim/feline.nvim")
 
 local function add_table(tbl, inject)
-    if inject then
-        table.insert(tbl, inject)
-    end
+   if inject then
+      table.insert(tbl, inject)
+   end
 end
 
 -- components are divided in 3 sections
