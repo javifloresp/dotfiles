@@ -3,12 +3,14 @@ local b = null_ls.builtins
 
 local sources = {
 
-    b.formatting.prettierd.with { filetypes = { "html", "markdown", "css", "go", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" } },
+    b.formatting.prettierd.with { filetypes = { "html", "markdown", "css", "go", "javascript", "javascriptreact",
+        "typescript", "typescriptreact", "vue", "tailwind" } },
     b.formatting.deno_fmt,
     -- ES lint
     --
     b.code_actions.eslint,
     b.diagnostics.eslint,
+    b.formatting.prettier,
 
     -- Lua
     b.formatting.stylua,

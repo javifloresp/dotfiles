@@ -31,6 +31,7 @@ M.plugins = {
                 "lua",
                 "go",
                 "typescript",
+                "vue",
                 "php",
             },
             indent = true,
@@ -166,7 +167,7 @@ M.ui = {
     -- color           = "custom.themes.expresso",
     theme_toggle    = { "solarized", "kanagawa" },
     -- theme           = "pink",
-    theme           = "newyork",
+    theme           = "codinginsylens",
     transparency    = true,
     italic_comments = true,
 }
