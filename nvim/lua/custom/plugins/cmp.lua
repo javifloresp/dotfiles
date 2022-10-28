@@ -49,7 +49,7 @@ local options = {
     },
     formatting = {
         format = function(entry, vim_item)
-            local icons = require "plugins.configs.lspkind_icons"
+            local icons = require("ui.icons").lspkind
             local menu = source_mapping[entry.source.name]
             if entry.source.name == 'cmp_tabnine' then
                 if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then

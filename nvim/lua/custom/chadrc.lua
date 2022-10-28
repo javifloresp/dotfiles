@@ -6,17 +6,6 @@ local userPlugins = require "custom.plugins" -- path to table
 
 M.plugins = {
     override = {
-        ["hrsh7th/nvim-cmp"] = {
-            config = function()
-                require "custom.plugins.cmp"
-            end,
-        },
-        ["feline-nvim/feline.nvim"] = {
-            after = "nvim-web-devicons",
-            config = function()
-                require "custom.plugins.statusline"
-            end,
-        },
         ["nvim-treesitter/nvim-treesitter"] = {
             ensure_installed = {
                 "vim",
@@ -163,11 +152,16 @@ M.plugins = {
 -- example of changing theme:
 
 M.ui = {
-    -- theme           = "expresso",
-    -- color           = "custom.themes.expresso",
-    theme_toggle    = { "solarized", "kanagawa" },
-    -- theme           = "pink",
+    -- -- theme           = "expresso",
+    -- -- color           = "custom.themes.expresso",
+    -- theme_toggle    = { "solarized", "kanagawa" },
     theme           = "codinginsylens",
+    -- -- theme           = "codinginsylens",
+    statusline = {
+        separator_style = "flame", -- default/round/block/arrow
+        config = "%!v:lua.require('ui.statusline').run()",
+        override = {},
+     },
     transparency    = true,
     italic_comments = true,
 }

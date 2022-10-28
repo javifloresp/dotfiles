@@ -130,11 +130,11 @@ return {
       require("custom.plugins.null-ls").setup()
     end,
   },
-  ["tzachar/cmp-tabnine"] = {
-    run = "./install.sh",
-    requires = "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
-  },
+  -- ["tzachar/cmp-tabnine"] = {
+  --   run = "./install.sh",
+  --   requires = "hrsh7th/nvim-cmp",
+  --   event = "InsertEnter",
+  -- },
   ["p00f/nvim-ts-rainbow"] = {
     config = function()
       require("nvim-treesitter.configs").setup {
