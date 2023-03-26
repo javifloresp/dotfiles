@@ -1,4 +1,4 @@
-return   {
+return {
     "williamboman/mason.nvim",
     opts = {
         ensure_installed = {
@@ -7,6 +7,7 @@ return   {
             "shfmt",
             "flake8",
             "prettierd",
+            "pint",
         },
     },
 }
