@@ -1,5 +1,17 @@
+format = """ 
+ $all
+"""
+
+[shell]
+fish_indicator = ''
+powershell_indicator = '_'
+zsh_indicator = ''
+unknown_indicator = 'mystery shell'
+style = 'cyan bold'
+disabled = false
+
 [aws]
-symbol = "  "
+symbol = " "
 
 [buf]
 symbol = " "
