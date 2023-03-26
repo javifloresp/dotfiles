@@ -1,8 +1,8 @@
 return {
     "goolord/alpha-nvim",
-    requires = { 'nvim-tree/nvim-web-devicons' },
+    requires = { "nvim-tree/nvim-web-devicons" },
     opts = function(_, opts)
-      local logo =  [[
+        local logo = [[
                               ▄▄▄██▀▀▀▄▄▄    ██▒   █▓ ██▓  ██████                        
                                 ░██  ▒██  ▀█▄▓██  █▒░▒██▒░ ▓██▄                          
                              ▓██▄██▓ ░██▄▄▄▄██▒██ █░░░██░  ▒   ██▒                       
@@ -21,7 +21,7 @@ return {
            ░          ░  ░      ░   ░  ░  ░ ░          ░ ░        ░  ░   ░        ░      
          ░                                       ░                              ░        
         ]]
-        opts.section.header.val = vim.split(logo , "\n" , { trimempty = true } )
+        opts.section.header.val = vim.split(logo, "\n", { trimempty = true })
         opts.section.buttons.val = {}
     end,
 }
