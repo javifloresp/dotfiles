@@ -1,145 +1,125 @@
-format = """ 
- $all
+format = """
+[](#363646)\
+$username\
+[ﮊ ](fg:#FFFFFF bg:#363646)\
+[](bg:#EAE5E5 fg:#363646)\
+$directory\
+[](fg:#EAE5E5 bg:#C34043)\
+$git_branch\
+$git_status\
+[](fg:#C34043 bg:#33658A)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:#33658A bg:#1B283A)\
+$docker_context\
+[](fg:#1B283A bg:#6E5230)\
+$time\
+[ ](fg:#6E5230)\
 """
 
-[shell]
-fish_indicator = ''
-powershell_indicator = '_'
-zsh_indicator = ''
-unknown_indicator = 'mystery shell'
-style = 'cyan bold'
-disabled = false
+# Disable the blank line at the start of the prompt
+# add_newline = false
 
-[aws]
-symbol = " "
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:#363646"
+style_root = "bg:#db3943"
+format = '[$user ]($style)'
 
-[buf]
-symbol = " "
+[directory]
+style = "fg:#000000 bg:#EAE5E5"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
 
 [c]
 symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[directory]
-read_only = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
 [docker_context]
 symbol = " "
+style = "bg:#06969A"
+format = '[[ $symbol $context ](bg:#06969A)]($style) $path'
 
 [elixir]
 symbol = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
 [elm]
 symbol = " "
-
-[fossil_branch]
-symbol = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
 [git_branch]
-symbol = " "
+symbol = ""
+style = "bg:#C34043"
+format = '[[ $symbol $branch ](bg:#C34043)]($style)'
+
+[git_status]
+style = "bg:#C34043"
+format = '[[($all_status$ahead_behind )](bg:#C34043)]($style)'
 
 [golang]
 symbol = " "
-
-[guix_shell]
-symbol = " "
-
+style = "bg:#33658A"
+#format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
+format = '[[ $symbol](bg:#33658A)]($style)'
 [haskell]
 symbol = " "
-
-[haxe]
-symbol = "⌘ "
-
-[hg_branch]
-symbol = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
 [java]
 symbol = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
 [julia]
 symbol = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[meson]
-symbol = "喝 "
+[nodejs]
+symbol = ""
+style = "bg:#33658A"
+format = '[[ $symbol ($version) ](bg:#33658A)]($style)'
 
 [nim]
 symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[os.symbols]
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "﯑ "
-Gentoo = " "
-HardenedBSD = "ﲊ "
-Illumos = " "
-Linux = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = " "
-openSUSE = " "
-OracleLinux = " "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = " "
-Solus = "ﴱ "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Windows = " "
-
-[package]
-symbol = " "
-
-[pijul_channel]
-symbol = "🪺 "
-
-[python]
-symbol = " "
-
-[rlang]
-symbol = "ﳒ "
-
-[ruby]
-symbol = " "
+style = "bg:#33658A"
+format = '[[ $symbol ($version) ](bg:#33658A)]($style)'
 
 [rust]
-symbol = " "
+symbol = ""
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
-[scala]
-symbol = " "
-
-[spack]
-symbol = "🅢 "
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#6E5230"
+format = '[[  $time ](bg:#6E5230)]($style)'
