@@ -36,3 +36,5 @@ nvim-legay-old-old/
 nvim/README.md
 starshipThemes/
 spotify-tui/
+./package.json
+./package-lock.json
