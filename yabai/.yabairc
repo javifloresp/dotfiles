@@ -52,6 +52,7 @@ yabai -m space 10 --label X
 # yabai -m rule --add app="Alacritty"     space=2
 # ^^ these are annoying
 yabai -m rule --add app="Brave Browser" space=2 opacity=1.0
+yabai -m rule --add app="Safari" space=2 opacity=1.0
 yabai -m rule --add app="Slack" space=1 opacity=0.9
 yabai -m rule --add app="iTerm2" space=3
 yabai -m rule --add app="Spotify" space=10 opacity=0.9

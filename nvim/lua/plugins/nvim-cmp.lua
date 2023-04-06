@@ -44,11 +44,14 @@ return {
             end, { "i", "s" }),
         })
 
+        opts.sources = {}
+
         opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
             { name = "nerdfont" },
             { name = "nvim_lsp" },
             { name = "luasnip" },
             { name = "buffer" },
+            { name = "cmp_tabnine" },
             { name = "path" },
         }))
 
@@ -58,11 +61,12 @@ return {
                 maxwidth = 150, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
                 ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
                 menu = {
-                    buffer = "[Buffer]",
-                    nvim_lsp = "[LSP]",
-                    luasnip = "[LuaSnip]",
-                    nvim_lua = "[Lua]",
-                    latex_symbols = "[Latex]",
+                    buffer = "[ Buffer  ]",
+                    nvim_lsp = "[ LSP  ]",
+                    cmp_tabnine = "[ TABNINE  ]",
+                    luasnip = "[ LuaSnip ◩ ]",
+                    nvim_lua = "[ Lua  ]",
+                    latex_symbols = "[ Latex ﳠ ]",
                 },
                 -- -- The function below will be called before any actual modifications from lspkind
                 -- -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
